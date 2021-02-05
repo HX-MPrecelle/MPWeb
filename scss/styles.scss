@@ -1,0 +1,50 @@
+// Variables globales
+$blue: #2D8FDA;
+$white-gray: #F3F3F3;
+$black: #505050;
+$black-shadow-text: #7a7a7a;
+
+//Mixings
+@mixin color-style($color, $style){
+	color: $color;
+	font-style: $style;
+}
+
+
+.header__logo--text{
+	color: $white-gray;
+}
+
+.slider__button--primary{
+	font-style: italic;
+}
+
+.slider__subtitle{
+	font-style: italic;
+}
+
+.services__box--title{
+	color: $black;
+	text-shadow: 1px 1px 2px $black-shadow-text;
+}
+
+.features__title{
+	font-style: italic;
+	text-shadow: 1px 1px 2px $black;
+	color: $blue;
+}
+
+.features__subtitle{
+	font-style: none;
+	text-shadow: 0.5px 0.5px 1px $black;
+}
+
+.footer__title{
+	font-style: italic;
+	text-shadow: 1px 1px 2px $black;
+	color: $blue;
+}
+
+.pricing__box--list{
+	@include color-style($black, italic);
+}

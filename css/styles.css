@@ -1,0 +1,30 @@
+.header__logo--text {
+  color: #F3F3F3; }
+
+.slider__button--primary {
+  font-style: italic; }
+
+.slider__subtitle {
+  font-style: italic; }
+
+.services__box--title {
+  color: #505050;
+  text-shadow: 1px 1px 2px #7a7a7a; }
+
+.features__title {
+  font-style: italic;
+  text-shadow: 1px 1px 2px #505050;
+  color: #2D8FDA; }
+
+.features__subtitle {
+  font-style: none;
+  text-shadow: 0.5px 0.5px 1px #505050; }
+
+.footer__title {
+  font-style: italic;
+  text-shadow: 1px 1px 2px #505050;
+  color: #2D8FDA; }
+
+.pricing__box--list {
+  color: #505050;
+  font-style: italic; }
