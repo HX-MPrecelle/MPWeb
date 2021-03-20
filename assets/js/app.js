@@ -84,3 +84,65 @@ function presupuestoFinal() {
     let confirmacionFinal = "Muchas gracias por ponerte en contacto con nosotros, " + nombreUsuario + " " + apellidoUsuario + ". El dominio elegido es: " + dominio + ". A continuación le daremos los detalles del costo por los servicios elegidos. Deberá abonar por primera vez $" + sumaTotal + " . Y luego abonará $" + sumaAnual + "anualmente. Además, el servicio tendrá un costo mensual de $" + sumaMensual + "."
     alert(confirmacionFinal) 
 }
+
+// ARRAY DE PLANES
+
+const PLANES = [
+    {
+    "planid": 1,
+    "cardID": "planBronze",
+    "nombre": "Plan Bronze",
+    "infoA": "Landing page",
+    "infoB": "Sitio de una sección",
+    "infoC": "Dominio gratuito",
+    "precio": 4500
+    },
+    {
+    "planid": 2,
+    "cardID": "planGold",
+    "nombre": "Plan Gold",
+    "infoA": "Landing page",
+    "infoB": "Sitio de hasta diez secciones",
+    "infoC": "Dominio gratuito",
+    "precio": 12500
+    },
+    {
+    "planid": 3,
+    "cardID": "planSilver",
+    "nombre": "Plan Silver",
+    "infoA": "Landing page",
+    "infoB": "Sitio de hasta tres secciones",
+    "infoC": "Dominio gratuito",
+    "precio": 8500
+    }
+]
+
+// IMPRIMO CARDS DE PLANES EN HTML
+
+const cardsPlanes = document.getElementById("cardsPlanes")
+const btnLoQuiero = document.getElementsByClassName("btnLoQuiero")
+
+document.addEventListener("DOMContentLoaded", () => {cargoCards()})
+
+// IMPRIMO CARDS DE PLANES EN HTML
+const cardsPlanes = document.getElementById("cardsPlanes")
+const btnLoQuiero = document.getElementsByClassName("btnLoQuiero")
+
+document.addEventListener("DOMContentLoaded", () => {cargoCards()})
+
+const cargoCards = () => {
+    cardsPlanes.innerHTML = ""
+    for (let plan of PLANES) {
+        let card = `<div class="col-lg-4 box">
+                        <h3>${plan.nombre}</h3>
+                        <h4>$ ${plan.precio}<span>[única vez]</span></h4>
+                        <ul>
+                          <li class=" pricing__box--list"><i class="bx bx-check"></i>${plan.infoA}</li>
+                          <li class=" pricing__box--list"><i class="bx bx-check"></i>${plan.infoB}</li>
+                          <li class=" pricing__box--list"><i class="bx bx-check"></i>${plan.infoC}</li>
+                        </ul>
+                        <button class="get-started-btn btnLoQuiero">¡LO QUIERO!</a>
+                    </div>`
+                    cardsPlanes.innerHTML += card
+                }
+}
