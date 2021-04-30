@@ -1,4 +1,4 @@
-const URLJSON = "./planes.json"
+const URLJSON = "./assets/js/planes.json"
 let details = JSON.parse(localStorage.getItem("Plan elegido"))
 
  // IMPRIMO CARDS DE PLANES CON AJAX
